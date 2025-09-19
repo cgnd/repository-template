@@ -15,5 +15,5 @@ jobs:
   pre-commit:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v5.0.0
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - uses: tox-dev/action-pre-commit-uv@270ddcea3d0ff0ef1527f49d12590954f31b4b3f # v1.0.2
