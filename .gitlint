@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Common Ground Electronics <https://cgnd.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[general]
+verbosity = 3
+ignore = body-is-missing
+contrib = contrib-body-requires-signed-off-by

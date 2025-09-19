@@ -2,6 +2,10 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -31,3 +35,16 @@ repos:
     rev: v5.1.1
     hooks:
       - id: reuse-lint-file
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      # gitlint hook is run in the commit-msg stage, so it will not run by
+      # default in CI or when running pre-commit run --all-files.
+      # To manually trigger gitlint using pre-commit for your last commit
+      # message, use the following command:
+      # pre-commit run gitlint --hook-stage commit-msg --commit-msg-filename .git/COMMIT_EDITMSG
+      - id: gitlint
+      # There is an additional gitlint-ci hook that can be used in CI, but it
+      # will only lint the latest commit. Since we want to lint all commits in
+      # a PR, we run gitlint in a dedicated workflow instead of using this hook.
+      # - id: gitlint-ci
