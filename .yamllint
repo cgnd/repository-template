@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: Common Ground Electronics <https://cgnd.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+extends: default
+
+yaml-files:
+  - "*.yaml"
+  - "*.yml"
+  - .yamllint
+
+ignore-from-file: .gitignore
+
+rules:
+  braces:
+    forbid: non-empty
+  brackets:
+    forbid: non-empty
+  comments:
+    level: warning
+    min-spaces-from-content: 1 # needed for compatibility with Prettier
+  document-start:
+    present: false
+  float-values:
+    require-numeral-before-decimal: true
+  indentation:
+    spaces: 2 # must match indent_size in .editorconfig file
+  line-length:
+    max: 80 # must match max_line_length in .editorconfig file
+    allow-non-breakable-inline-mappings: true
+  quoted-strings:
+    required: only-when-needed
+    allow-quoted-quotes: true
+    quote-type: double
