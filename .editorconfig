@@ -29,3 +29,8 @@ max_line_length = 79
 # Markdown
 [*.md]
 max_line_length = unset
+
+# Makefile
+[Makefile]
+indent_style = tab
+indent_size = 8
