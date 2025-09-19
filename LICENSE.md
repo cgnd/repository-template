@@ -16,8 +16,6 @@ This notice must be included in any distributions of this project or derivative 
 
 ## SPDX & REUSE Compliance
 
- [![REUSE status](https://api.reuse.software/badge/github.com/cgnd/repository-template)](https://api.reuse.software/info/github.com/cgnd/repository-template)
-
 This repository is compliant with Version 3.3 of the [REUSE Specification](https://reuse.software/spec/). Run the following commands to generate an SPDX bill of materials:
 
 ```sh
