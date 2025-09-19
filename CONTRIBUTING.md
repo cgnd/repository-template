@@ -68,6 +68,6 @@ Signed-off-by: Your Name <your.email@example.com>
 For your commits, replace:
 
 - `Your Name` with your legal name (pseudonyms, hacker handles, and the names of groups are not allowed)
-- `your.email@example.com` with the real email address you are using to author the commit. Pseudo or anonymized emails such as `you-id+your-username@users.noreply.github.com` are not allowed. The email must match the one you use to author the commit (CI will fail if there is no match).
+- `your.email@example.com` with the real email address you are using to author the commit.
 
 You can automatically add the `Signed-off-by` trailer to your commit body using `git commit -s` (see the git documentation for [`--signoff`](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s)). If you are altering an existing commit created by someone else, you must add your `Signed-off-by:` line without removing the existing one.

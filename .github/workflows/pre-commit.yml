@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: Common Ground Electronics <https://cgnd.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: tox-dev/action-pre-commit-uv@v1
