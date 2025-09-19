@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: Chris Wilson <christopher.david.wilson@gmail.com>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
