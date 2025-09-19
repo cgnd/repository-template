@@ -42,9 +42,16 @@ repos:
       # default in CI or when running pre-commit run --all-files.
       # To manually trigger gitlint using pre-commit for your last commit
       # message, use the following command:
-      # pre-commit run gitlint --hook-stage commit-msg --commit-msg-filename .git/COMMIT_EDITMSG
+      # yamllint disable-line rule:line-length
+      #     pre-commit run gitlint --hook-stage commit-msg --commit-msg-filename .git/COMMIT_EDITMSG
       - id: gitlint
       # There is an additional gitlint-ci hook that can be used in CI, but it
       # will only lint the latest commit. Since we want to lint all commits in
       # a PR, we run gitlint in a dedicated workflow instead of using this hook.
       # - id: gitlint-ci
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.29.0
+    hooks:
+      - id: yamllint
+        args:
+          - --strict
