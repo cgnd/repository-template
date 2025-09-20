@@ -4,6 +4,14 @@
 
 A template repository with some standard boilerplate.
 
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
+
+- [Repository Template](#repository-template)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+<!-- mdformat-toc end -->
+
 ## Contributing
 
 See the [CONTRIBUTING.md](CONTRIBUTING.md) file for project contribution guidelines.
