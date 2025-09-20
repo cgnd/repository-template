@@ -27,13 +27,13 @@ pre-commit install
 
 You can configure `git` to automatically install `pre-commit` hooks when a new repository is cloned (rather than having to run `pre-commit install` manually). Follow the recommended setup instructions:
 
-https://pre-commit.com/#pre-commit-init-templatedir
+<https://pre-commit.com/#pre-commit-init-templatedir>
 
 ### REUSE
 
 This project uses the [`reuse`](https://reuse.software/) tool to ensure that all files have copyright and license information. REUSE compliance is checked automatically via a pre-commit hook, but it's also possible to install the `reuse` tool and run the linter manually on all files in the repository:
 
-```
+```sh
 uv tool install reuse
 reuse lint
 ```
