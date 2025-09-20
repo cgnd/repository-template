@@ -15,7 +15,9 @@ This notice must be included in any distributions of this project or derivative 
 
 ## SPDX & REUSE Compliance
 
-This repository is compliant with Version 3.3 of the [REUSE Specification](https://reuse.software/spec/). Run the following commands to generate an SPDX bill of materials:
+This repository is compliant with Version 3.3 of the [REUSE Specification](https://reuse.software/spec/).
+
+Run the following commands to generate an SPDX Software Bill of Materials (SBOM):
 
 ```sh
 pip install reuse

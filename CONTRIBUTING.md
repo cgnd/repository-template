@@ -2,39 +2,112 @@
 
 Contributions are welcome!
 
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
+
+- [Contributing](#contributing)
+  - [Developer Tools](#developer-tools)
+    - [uv](#uv)
+    - [pre-commit](#pre-commit)
+    - [pre-commit-hooks](#pre-commit-hooks)
+    - [REUSE](#reuse)
+    - [yamllint](#yamllint)
+    - [markdownlint-cli2](#markdownlint-cli2)
+    - [mdformat](#mdformat)
+  - [Licensing](#licensing)
+    - [Copyright and License Notices](#copyright-and-license-notices)
+    - [Developer Certification of Origin (DCO) Sign-Off](#developer-certification-of-origin-dco-sign-off)
+
+<!-- mdformat-toc end -->
+
 ## Developer Tools
+
+This project uses [pre-commit](https://pre-commit.com/) to identify simple issues before submission to code review. Although `pre-commit` hooks are run automatically in CI, it is strongly recommended that you install `pre-commit` locally to catch these issues *before* a commit is created in the repository.
 
 ### uv
 
-Some of the developer tools described below are provided as python packages. Commands are provided for installing these tools using [uv](https://docs.astral.sh/uv/), an extremely fast Python package and project manager.
+Some of the developer tools described below (e.g. `pre-commit`) are installed via python packages. Commands are provided below for installing these tools using [uv](https://docs.astral.sh/uv/), an extremely fast Python package and project manager.
 
-Follow the [installation guide](https://docs.astral.sh/uv/getting-started/installation/) to install the `uv` command.
+Follow the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/) to install the `uv` command.
 
 > [!NOTE]
-> While `uv` is recommended, it's not required. The tools described below can also be installed via other python package managers such as [pipx](https://pipx.pypa.io/stable/) or [pip](https://pip.pypa.io/en/stable/).
+> While `uv` is recommended, it's not required. The python-based tools described below can also be installed globally via other python package managers such as [pipx](https://pipx.pypa.io/stable/), or installed directly into your python environment via [pip](https://pip.pypa.io/en/stable/).
 
 ### pre-commit
-
-This project uses [pre-commit](https://pre-commit.com/) to catch simple issues before a commit is created in the repository.
 
 Run the following commands to install the `pre-commit` tool and the git pre-commit hooks defined by this project's [`.pre-commit-config.yaml`](.pre-commit-config.yaml) file:
 
 ```sh
 uv tool install pre-commit
 pre-commit install
+
+# Run all pre-commit hooks on all files in the repository
+pre-commit run --all
 ```
 
 You can configure `git` to automatically install `pre-commit` hooks when a new repository is cloned (rather than having to run `pre-commit install` manually). Follow the recommended setup instructions:
 
 <https://pre-commit.com/#pre-commit-init-templatedir>
 
+### pre-commit-hooks
+
+The pre-commit developers provide an [official set of pre-commit hooks](https://github.com/pre-commit/pre-commit-hooks). These hooks are installed and run automatically via `pre-commit`, but it's also possible to install them so each hook can be run as a command outside of the pre-commit framework:
+
+```sh
+uv tool install pre-commit-hooks
+
+# Check a json file
+check-json .vscode/extensions.json
+```
+
 ### REUSE
 
-This project uses the [`reuse`](https://reuse.software/) tool to ensure that all files have copyright and license information. REUSE compliance is checked automatically via a pre-commit hook, but it's also possible to install the `reuse` tool and run the linter manually on all files in the repository:
+This project uses the [`reuse`](https://reuse.software/) tool to ensure that all files have copyright and license information. REUSE compliance is checked automatically via a pre-commit hook, but it's also possible to install the `reuse` CLI tool and run the linter manually on all files in the repository:
 
 ```sh
 uv tool install reuse
+
+# Lint all files in the project
 reuse lint
+```
+
+### yamllint
+
+[yamllint](https://yamllint.readthedocs.io/en/stable/index.html) is a linter for YAML files. It is run automatically as a pre-commit hook, but it's also possible to install the `yamllint` CLI tool and run the linter manually.
+
+```sh
+uv tool install yamllint
+
+# Lint YAML files in the current directory tree
+yamllint .
+```
+
+### markdownlint-cli2
+
+[markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) is a command-line interface for linting Markdown files. It is run automatically as a pre-commit hook, but it's also possible to install the `markdownlint-cli2` CLI tool and run the linter manually.
+
+Follow the [Install](https://github.com/DavidAnson/markdownlint-cli2?tab=readme-ov-file#install) guide to install the `markdownlint-cli2` tool.
+
+```sh
+# Lint markdown files in the current directory tree
+markdownlint-cli2 .
+```
+
+### mdformat
+
+[mdformat](https://mdformat.readthedocs.io/en/stable/index.html) is an opinionated Markdown formatter that can be used to enforce a consistent style in Markdown files. It is run automatically as a pre-commit hook, but it's also possible to install the `mdformat` CLI tool and run the formatter manually.
+
+```sh
+uv tool install \
+--with mdformat-toc \
+--with mdformat-gfm \
+--with mdformat-frontmatter \
+--with mdformat-footnote \
+--with mdformat-gfm-alerts \
+--with mdformat-tables \
+mdformat
+
+# Format markdown files in the current directory tree
+mdformat .
 ```
 
 ## Licensing
@@ -54,7 +127,7 @@ SPDX-License-Identifier: <SPDX License ID>
 
 <!-- REUSE-IgnoreEnd -->
 
-Place both lines at the very top of the file using the file’s native comment syntax. If you authored substantial, original content, you *may* add an additional copyright line for yourself or your organization.
+Place both lines at the very top of the file using the file’s native comment syntax (make sure to replace `<SPDX License ID>` with the actual [SPDX License ID](https://spdx.org/licenses/)). If you authored substantial, original content, you *may* add an additional copyright line for yourself or your organization.
 
 ### Developer Certification of Origin (DCO) Sign-Off
 
