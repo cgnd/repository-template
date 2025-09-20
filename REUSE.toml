@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: Common Ground Electronics <https://cgnd.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+SPDX-PackageDownloadLocation = "https://github.com/cgnd/repository-template/"
+SPDX-PackageName = "repository-template"
+SPDX-PackageSupplier = "Common Ground Electronics <https://cgnd.dev>"
 version = 1
 
 [[annotations]]
