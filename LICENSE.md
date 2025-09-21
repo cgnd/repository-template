@@ -7,7 +7,6 @@ Licensing information for individual files can be found in [REUSE.toml](REUSE.to
 Full license texts are provided in the [LICENSES](LICENSES/) directory.
 
 > [!IMPORTANT]
->
 > Any *Common Ground Electronics* brand elements (including but not limited to name, URL, and logos) **MUST NOT** be used to represent you or your projects, products, or company. No adaptation or use of any kind is allowed without the express written permission of *Common Ground Electronics*.
 >
 > If you modify this material and/or distribute derivitive works based on this material, you **MUST** remove all Common Ground Electronics branding.
