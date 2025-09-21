@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Common Ground Electronics <https://cgnd.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# https://mdformat.readthedocs.io/en/stable/users/configuration_file.html
+
+wrap = "no"
+number = true

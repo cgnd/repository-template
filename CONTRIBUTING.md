@@ -11,7 +11,6 @@ Some of the developer tools described below are provided as python packages. Com
 Follow the [installation guide](https://docs.astral.sh/uv/getting-started/installation/) to install the `uv` command.
 
 > [!NOTE]
->
 > While `uv` is recommended, it's not required. The tools described below can also be installed via other python package managers such as [pipx](https://pipx.pypa.io/stable/) or [pip](https://pip.pypa.io/en/stable/).
 
 ### pre-commit
@@ -47,10 +46,12 @@ See [LICENSE.md](LICENSE.md) for details on this project's licensing information
 This project uses [SPDX](https://spdx.dev/)/[REUSE](https://reuse.software/)-style file headers:
 
 <!-- REUSE-IgnoreStart -->
+
 ```plaintext
 SPDX-FileCopyrightText: Common Ground Electronics <https://cgnd.dev>
 SPDX-License-Identifier: <SPDX License ID>
 ```
+
 <!-- REUSE-IgnoreEnd -->
 
 Place both lines at the very top of the file using the file’s native comment syntax. If you authored substantial, original content, you *may* add an additional copyright line for yourself or your organization.
