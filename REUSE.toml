@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+# https://reuse.software/spec-3.3/#reusetoml
+
 SPDX-PackageDownloadLocation = "https://github.com/cgnd/repository-template/"
 SPDX-PackageName = "repository-template"
 SPDX-PackageSupplier = "Common Ground Electronics <https://cgnd.dev>"
