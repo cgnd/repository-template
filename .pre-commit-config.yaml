@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+# https://pre-commit.com/#plugins
+
 default_install_hook_types:
   - pre-commit
   - commit-msg

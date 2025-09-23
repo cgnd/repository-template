@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+# https://jorisroovers.com/gitlint/latest/configuration/
+
 [general]
 # https://jorisroovers.com/gitlint/latest/configuration/general_options/#verbosity
 verbosity = 3
