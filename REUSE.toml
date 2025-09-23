@@ -10,7 +10,11 @@ SPDX-PackageSupplier = "Common Ground Electronics <https://cgnd.dev>"
 version = 1
 
 [[annotations]]
-path = ["CONTRIBUTING.md", "README.md", ".vscode/extensions.json"]
-precedence = "aggregate"
 SPDX-FileCopyrightText = "Common Ground Electronics <https://cgnd.dev>"
 SPDX-License-Identifier = "CC0-1.0"
+path = [
+  ".vscode/extensions.json",
+  "CONTRIBUTING.md",
+  "README.md",
+]
+precedence = "aggregate"

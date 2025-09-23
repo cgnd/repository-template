@@ -13,6 +13,7 @@ Contributions are welcome!
     - [yamllint](#yamllint)
     - [markdownlint-cli2](#markdownlint-cli2)
     - [mdformat](#mdformat)
+    - [taplo](#taplo)
   - [Licensing](#licensing)
     - [Copyright and License Notices](#copyright-and-license-notices)
     - [Developer Certification of Origin (DCO) Sign-Off](#developer-certification-of-origin-dco-sign-off)
@@ -108,6 +109,20 @@ mdformat
 
 # Format markdown files in the current directory tree
 mdformat .
+```
+
+### taplo
+
+taplo is a toolkit for TOML files that supports linting and formatting. It is run automatically as a pre-commit hook, but it's also possible to install the `taplo` CLI tool and run the linter/formatter manually.
+
+Follow the [Installation](https://taplo.tamasfe.dev/cli/installation/binary.html) guides to install the `taplo` tool.
+
+```sh
+# Lint TOML files in the current directory tree
+taplo lint
+
+# Format TOML files in the current directory tree
+taplo format
 ```
 
 ## Licensing
