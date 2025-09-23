@@ -7,7 +7,6 @@ extends: default
 yaml-files:
   - "*.yaml"
   - "*.yml"
-  - .yamllint
 
 ignore-from-file: .gitignore
 
